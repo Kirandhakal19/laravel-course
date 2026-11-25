@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitmap IT Solution</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Font for that modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bitmap.css') }}">
 </head>
 <body>
@@ -14,7 +16,8 @@
         <div class="container header-inner">
             <div class="logo">
                 <a href="/bitmap">
-                    <span class="logo-mark">B</span> Bitmap <span>IT Solution</span>
+                    <!-- Change src to your logo image -->
+                    <img src="{{ asset('images/logo.png') }}" alt="Bitmap Logo" style="height: 45px;">
                 </a>
             </div>
             
@@ -25,11 +28,11 @@
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
             
@@ -49,7 +52,7 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <div class="logo" style="margin-bottom: 20px;">
-                    <a href="#" style="color: #fff;"><span class="logo-mark">B</span> Bitmap</a>
+                    <img src="{{ asset('images/logo.png') }}" alt="Bitmap Logo" style="height: 40px;">
                 </div>
                 <p>BITS is a creatively driven integrated Business Consulting, Advertising agency and IT company located in Narayangarh.</p>
                 <div class="social-links" style="margin-top: 20px;">
@@ -96,7 +99,6 @@
         </div>
     </footer>
 
-    <!-- Simple Script for Mobile Menu -->
     <script>
         document.getElementById('navToggle').addEventListener('click', function() {
             document.getElementById('mainNav').classList.toggle('active');
