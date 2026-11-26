@@ -110,4 +110,8 @@
         </div>
     </div>
 </section>
+<!-- Floating Admin Button -->
+<a href="/admin/services" style="position: fixed; bottom: 30px; right: 30px; background: #0f172a; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999;">
+    ⚙️ Manage Services (Admin)
+</a>
 @endsection
