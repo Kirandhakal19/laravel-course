@@ -99,43 +99,14 @@
             <p>We provide the following Services as per the need of the clients.</p>
         </div>
 
-        <div class="services-grid">
-            <!-- Card 1 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
-                <h3>Web Development</h3>
-                <p>Custom, responsive, and high-performance websites built to grow your business.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
-                <h3>Graphic Design</h3>
-                <p>Eye-catching logos, brochures, and social media graphics that stand out.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
-                <h3>Digital Marketing</h3>
-                <p>Strategic SEO and social media campaigns to reach your target audience.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Mobile Apps</h3>
-                <p>Native and cross-platform mobile applications for iOS and Android.</p>
-            </div>
-            <!-- Card 5 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-server"></i></div>
-                <h3>IT Consultancy</h3>
-                <p>Expert advice to optimize your IT infrastructure and software architecture.</p>
-            </div>
-            <!-- Card 6 -->
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-shopping-cart"></i></div>
-                <h3>E-Commerce Solutions</h3>
-                <p>Secure and scalable online stores to help you sell products globally.</p>
-            </div>
+                <div class="services-grid">
+            @foreach($services as $service)
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas {{ $service->icon }}"></i></div>
+                    <h3>{{ $service->title }}</h3>
+                    <p>{{ $service->description }}</p>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
