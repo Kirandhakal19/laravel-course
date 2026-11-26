@@ -4,25 +4,28 @@
 
 <!-- SECTION 1: HERO -->
 <section class="hero-section">
-    <div class="container hero-inner">
-        
-        <div class="hero-text">
-            <h1>IT Solutions & Graphics Services Company</h1>
-            <p>Presenting your business in a digital mode is known to be a smarter way of doing business. <br><strong>LET THE WORLD KNOW YOU EXIST</strong></p>
+    <div class="container">
+        <!-- ADDED CLASS 'hero-inner' HERE TO FIX ALIGNMENT -->
+        <div class="hero-inner" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; z-index: 2;">
             
-            <div class="hero-buttons">
-                <!-- White Button -->
-                <a href="#about" class="btn-white">About Us</a>
-                <!-- Red Button -->
-                <a href="#" class="btn-red">Contact Us</a>
+            <div class="hero-text" style="width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center;">
+                <h1>IT Solutions & Graphics Services Company</h1>
+                <p>Presenting your business in a digital mode is known to be a smarter way of doing business. <br><strong>LET THE WORLD KNOW YOU EXIST</strong></p>
+                
+                <div class="hero-buttons" style="display: flex; gap: 20px; justify-content: center;">
+                    <!-- White Button -->
+                    <a href="#about" class="btn-white">About Us</a>
+                    <!-- Red Button -->
+                    <a href="#" class="btn-red">Contact Us</a>
+                </div>
             </div>
-        </div>
 
-        <div class="hero-image">
-            <!-- Change src to your illustration image -->
-            <img src="{{ asset('images/hero-img.png') }}" alt="IT Solutions">
-        </div>
+            <div class="hero-image" style="width: 100%; text-align: center; margin-top: 40px;">
+                <!-- Change src to your illustration image -->
+                <img src="{{ asset('images/hero-img.png') }}" alt="IT Solutions" style="max-width: 80%; height: auto; margin: 0 auto;">
+            </div>
 
+        </div>
     </div>
     
     <!-- The wavy bottom SVG -->
@@ -69,6 +72,7 @@
         </div>
     </div>
 </section>
+
 <!-- SECTION 3: STATS COUNTER -->
 <section class="stats-section">
     <div class="container stats-grid">
@@ -99,7 +103,7 @@
             <p>We provide the following Services as per the need of the clients.</p>
         </div>
 
-                <div class="services-grid">
+        <div class="services-grid">
             @foreach($services as $service)
                 <div class="service-card">
                     <div class="icon-box"><i class="fas {{ $service->icon }}"></i></div>
@@ -110,8 +114,28 @@
         </div>
     </div>
 </section>
+
+<!-- SECTION 5: CALL TO ACTION -->
+<section class="cta-section">
+    <div class="container cta-inner">
+        
+        <!-- Make the top text clickable -->
+        <a href="#contact" class="cta-top-link">
+            <h5>WANT TO WORK WITH US?</h5>
+        </a>
+        
+        <h2>LET THE WORLD KNOW YOU EXIST!</h2>
+        <p>Digitalise your business with attractive graphics, grow the customers and business. Get all IT related services and shift from the traditional way of business marketing to the new digital technology.</p>
+        
+        <!-- The button -->
+        <a href="#contact" class="btn-cta">Get Started Now</a>
+        
+    </div>
+</section>
+
 <!-- Floating Admin Button -->
 <a href="/admin/services" style="position: fixed; bottom: 30px; right: 30px; background: #0f172a; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999;">
     ⚙️ Manage Services (Admin)
 </a>
+
 @endsection

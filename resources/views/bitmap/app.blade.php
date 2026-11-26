@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bitmap.css') }}">
 </head>
-<body>
+<body id="top">
 
     <!-- HEADER -->
     <header class="bitmap-header">
@@ -25,16 +25,16 @@
                 <i class="fas fa-bars"></i>
             </div>
 
-            <nav class="main-nav" id="mainNav">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+            <nav class="main-nav" id="mainNav" style="display: flex; justify-content: center; align-items: center; flex-grow: 1;">
+        <ul style="display: flex; flex-direction: row; gap: 30px; list-style: none; margin: 0; padding: 0;">
+        <li><a href="#top" style="text-decoration: none; color: #1e293b; font-weight: 600;">Home</a></li>
+        <li><a href="#about" style="text-decoration: none; color: #1e293b; font-weight: 600;">About Us</a></li>
+        <li><a href="#services" style="text-decoration: none; color: #1e293b; font-weight: 600;">Services</a></li>
+        <li><a href="#projects" style="text-decoration: none; color: #1e293b; font-weight: 600;">Projects</a></li>
+        <li><a href="#blogs" style="text-decoration: none; color: #1e293b; font-weight: 600;">Blogs</a></li>
+        <li><a href="#contact" style="text-decoration: none; color: #1e293b; font-weight: 600;">Contact Us</a></li>
+        </ul>
+     </nav>
             
             <div class="header-cta">
                 <a href="#" class="btn-discount">Get 10% Discount</a>
